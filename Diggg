@@ -1,0 +1,23 @@
+To calculate the number of likes on a Farcaster post, you can use the following Python code based on the provided contexts:
+
+```python
+def count_likes(alice, bob):
+    alice_likes = alice.count("1")
+    bob_likes = bob.count("1")
+    common_likes = sum(1 for x, y in zip(alice, bob) if x == y and y == "1")
+    return common_likes
+
+alice = "010101"
+bob = "101101"
+result = count_likes(alice, bob)
+print(f"Alice and Bob both like {result} topics.")
+```
+
+This code counts the number of "1"s in both Alice's and Bob's strings, representing their likes. It then uses the `zip` function to iterate through the strings simultaneously, and counts the number of times both strings have a "1" at the same index. This count represents the common likes between Alice and Bob.
+
+The function `count_likes` takes the strings representing Alice's and Bob's votes as input and returns the number of common likes. You can test the function with different input strings to calculate the number of common likes.
+
+Note: The code provided does not cover dislikes, as the contexts only mentioned calculating the number of common likes.
+
+[source](https://www.geeksforgeeks.org/python-program-to-find-number-of-likes-and-dislikes/)
+[source](https://docs.farcaster.xyz/developers/guides/writing/messages)
