@@ -7,8 +7,8 @@ def count_likes(alice, bob):
     common_likes = sum(1 for x, y in zip(alice, bob) if x == y and y == "1")
     return common_likes
 
-alice = "010101"
-bob = "101101"
+alice = "010122"
+bob = "101122"
 result = count_likes(alice, bob)
 print(f"Alice and Bob both like {result} topics.")
 ```
